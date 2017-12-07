@@ -1,0 +1,89 @@
+<?php 
+$this->headMeta()->appendHttpEquiv('Content-Type', 'text/html;charset=utf-8');
+$this->headTitle()->setSeparator(' - ');
+$this->headTitle('naviu - pagina de prueba');
+echo $this->doctype(); ?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+<head>
+    <?php echo $this->headMeta(); ?> 
+    <?php echo $this->headTitle(); ?>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+	<?php echo $this->headLink()->prependStylesheet($this->baseUrl().'/css/Footer-with-button-logo.css'); ?>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<?php echo $this->headLink()->prependStylesheet($this->baseUrl().'/css/site.css'); ?>
+</head>
+<body>
+<div id="content">
+	<nav class="navbar navbar-default menu" role="navigation">
+	  <div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse"
+				data-target=".navbar-ex1-collapse">
+		  <span class="sr-only">Desplegar navegación</span>
+		  <span class="icon-bar"></span>
+		  <span class="icon-bar"></span>
+		  <span class="icon-bar"></span>
+		</button>
+		<a href="<?php echo $this->url(array('controller' => 'index', 'action' => 'index')) ; ?>" class="img-responsive logo logo_acomodar"><img src="/imgs/logo.png" /></a>
+	  </div>
+	 
+	  <div class="collapse navbar-collapse navbar-ex1-collapse">
+		<ul class="nav navbar-nav">
+		  <li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+			  Menu Principal <b class="caret"></b>
+			</a>
+			<ul class="dropdown-menu">
+			  <li><a href="<?php echo $this->url(array('controller' => 'usuarioh', 'action' => 'tipo')) ; ?>">Usuario hotelero</a></li>
+			  <li><a href="<?php echo $this->url(array('controller' => 'establecimiento', 'action' => 'tipo')) ; ?>">Establecimiento</a></li>
+			  <li><a href="<?php echo $this->url(array('controller' => 'habitacion', 'action' => 'tipo')) ; ?>">Habitacion</a></li>
+			</ul>
+		  </li>
+		</ul>
+	 
+		<form class="navbar-form navbar-right" role="search">
+		  <div class="form-group">
+			<input type="text" class="form-control" placeholder="Buscar">
+		  </div>
+		</form>
+	
+	  </div>
+	</nav>
+    <h1><?php echo $this->escape($this->title); ?></h1>
+    <?php echo $this->layout()->content; ?>
+	<footer id="myFooter">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                   <a href="#" class="img-responsive logo"><img src="/imgs/logo.png" /></a>
+                </div>
+                <div class="col-sm-2">
+                    <h5></h5>
+                    
+                </div>
+                <div class="col-sm-2">
+                    <h5></h5>
+                    
+                </div>
+                <div class="col-sm-2">
+                    <h5></h5>
+                    
+                </div>
+                <div class="col-sm-3">
+                    <div class="social-networks">
+                        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="google"><i class="fa fa-google-plus"></i></a>
+                    </div>
+                    <button type="button" class="btn btn-default">Contacto</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>© pagina de prueba </p>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

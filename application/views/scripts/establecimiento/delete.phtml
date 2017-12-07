@@ -1,0 +1,9 @@
+<?php echo $this->titulo; ?>
+<p>
+    Esta seguro de borrar  el registro?
+</p>
+<form action="<?php echo $this->url(array('action' => 'delete'));?>" method="post">
+    <input type="hidden" name="id" value="<?php echo $this->usuario_delete['id_h'];?>">
+    <input type="submit" name="del" value="Si">
+    <input type="submit" name="del" value="No">
+</form>

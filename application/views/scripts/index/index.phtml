@@ -1,0 +1,24 @@
+<h1><?php echo $this->titulo; ?></h1>
+<?php foreach($this->habitacion as $habitacions) : ?>
+    <div class="row habitacion">
+        <div class="col-md-3">
+		     <img src="<?php echo $this->baseUrl($habitacions['img']);?>" class="img_habitacion" />
+		</div>
+        <div class="col-md-9 info_habitacion">
+		    <p class="habitaciones">
+			   <?php echo 'Habitacion '.$this->escape($habitacions['nombre_hb']); ?>
+			   <br>
+			   <?php echo 'Hotel '.$this->escape($habitacions['nombre_h']).' / Ubicacion: '.$this->escape($habitacions['ubicacion']).' / Dueño del Hotel: '.$this->escape($habitacions['apellido']).' '.$this->escape($habitacions['nombre']); ?> 
+			</p>
+			 <p class="text-right">
+			   <?php echo 'Tarifa: '.$this->escape($habitacions['tarifa']); ?>
+			</p>
+			<p class="text-right">
+			  <?php echo 'Maxima cantidad de personas: '.$this->escape($habitacions['maxp']); ?> 
+			</p>
+			<button class="btn btn-warning pull-right">Search</button>
+		</div>
+    </div>
+	<hr>
+
+<?php endforeach; ?>
